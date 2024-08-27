@@ -1,7 +1,8 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-    apt-get install -y --no-recommends \
+    apt-get install software-properties-common -y --no-recommends \
+    add-apt-repository ppa:deadsnakes/ppa \
     python3.10
 
 RUN python3.10 --version
