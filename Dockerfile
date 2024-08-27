@@ -1,28 +1,8 @@
-FROM docker:latest
+FROM ubuntu:latest
 
-RUN apk update && \
-    apk add --no-cache \
-    bash \
-    build-base \
-    libffi-dev \
-    openssl-dev \
-    bzip2-dev \
-    zlib-dev \
-    xz-dev \
-    readline-dev \
-    sqlite-dev \
-    linux-headers \
-    tk-dev \
-    && apk add --no-cache \
-    curl \
-    && curl -O https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tar.xz \
-    && tar -xf Python-3.10.0.tar.xz \
-    && cd Python-3.10.0 \
-    && ./configure --enable-optimizations \
-    && make -j$(nproc) \
-    && make altinstall \
-    && cd .. \
-    && rm -rf Python-3.10.0 Python-3.10.0.tar.xz
+RUN apt-get update && \
+    apt-get install -y --no-recommends \
+    python3.10
 
 RUN python3.10 --version
 
