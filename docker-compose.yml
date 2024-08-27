@@ -1,0 +1,4 @@
+services:
+  docker:
+    image: keviocastro/docker-gcloud-python:3.10
+    build: .
