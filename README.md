@@ -1,4 +1,4 @@
-# Docker Python 3.10 com Google Cloud SDK
+# Docker Python 3.12 com Google Cloud SDK
 
 Este projeto configura um ambiente Docker com Python 3.12 e Google Cloud SDK. Ele é útil para desenvolvedores que precisam de um ambiente consistente para desenvolver e testar aplicações que utilizam Python e Google Cloud.
 
