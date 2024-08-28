@@ -1,9 +1,6 @@
-FROM ubuntu:latest
+FROM docker:latest
 
-RUN apt-get update && \
-    apt-get install software-properties-common -y --no-recommends \
-    add-apt-repository ppa:deadsnakes/ppa \
-    python3.10
+RUN apk add python3.10 curl bash
 
 RUN python3.10 --version
 
